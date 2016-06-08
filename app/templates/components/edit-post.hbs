@@ -1,0 +1,19 @@
+{{#if editPost}}
+  <div class="editPost">
+    <form>
+      <label for="name">Title</label>
+      {{input value=name id="name" placeholder=post.name}}
+      <label for="author">Author</label>
+      {{input value=author id="author" placeholder=post.author}}
+      <label for="date">Date</label>
+      {{input value=date id="date" placeholder=post.date}}
+      <label for="text">Title</label>
+      {{textarea value=text id="text" rows="5" placeholder=post.text}}
+      <label for="image">Image URL</label>
+      {{input value=image id="image" placeholder=post.image}}
+      <button {{action 'savePost' post}}>Save</button>
+    </form>
+  </div>
+{{else}}
+  <button {{action 'postFormShow'}}>edit this post</button>
+{{/if}}

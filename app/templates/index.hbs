@@ -15,6 +15,9 @@
           <h2 class="blog-post-title">{{post.name}} <br></h2>
           <p class="blog-post-meta">post date: {{post.date}} by {{post.author}} </p>
           <blockquote>{{post.text}}</blockquote>
+          {{edit-post post=post updatePost="updatePost"}}
+          <br>
+          <button {{action 'destroyPost' post}}>Delete this post</button><hr>
         {{/each}}
       </ul>
       </div><!-- /.blog-post -->

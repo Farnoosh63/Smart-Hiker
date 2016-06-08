@@ -1,0 +1,50 @@
+<div class="container">
+  <div class="blog-header">
+    <h1 class="blog-title">The smart hiker Blog</h1>
+    <p class="lead blog-description">Hiking and Camping Blog.</p>
+  </div>
+
+  <div class="row">
+
+    <div class="col-sm-8 blog-main">
+
+      <div class="blog-post">
+      <ul>
+        {{#each model as |post|}}
+          <img class="img-circle img-responsive img-center" style="width: 200px"src={{post.image}} alt="postImage">
+          <h2 class="blog-post-title">{{post.name}} <br></h2>
+          <p class="blog-post-meta">post date: {{post.date}} by {{post.author}} </p>
+          <blockquote>{{post.text}}</blockquote>
+        {{/each}}
+      </ul>
+      </div><!-- /.blog-post -->
+
+      <nav>
+        <ul class="pager">
+          <li><a href="#">Previous</a></li>
+          <li><a href="#">Next</a></li>
+        </ul>
+      </nav>
+
+    </div><!-- /.blog-main -->
+
+    <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+      <div class="sidebar-module sidebar-module-inset">
+        <h4>About</h4>
+        <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
+      </div>
+      <div class="sidebar-module">
+        {{new-post savePost="savePost"}}
+      </div>
+      <div class="sidebar-module">
+        <h4>links</h4>
+        <ol class="list-unstyled">
+          <li><a href="#">GitHub Repo for Farnoosh</a></li>
+          <li><a href="#">GitHub Repo for Kevin</a></li>
+          <li><a href="www.epicodus.com">Epicodus</a></li>
+        </ol>
+      </div>
+    </div><!-- /.blog-sidebar -->
+
+  </div><!-- /.row -->
+</div>

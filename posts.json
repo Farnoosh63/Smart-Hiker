@@ -1,0 +1,20 @@
+{ "posts": [{
+    "name": "camping in desert",
+    "author": "John Bargerm",
+    "date": "1997",
+    "text":"Woah Bessy! Sure has been awhile since we last strolled in here and worked on things round these parts",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/5/5a/Camping_by_Barriere_Lake,_British_Columbia_-_20040801.jpg"
+  }, {
+    "name": "Campsite",
+    "author": "A trip in the woods",
+    "date": "2015",
+    "text": "Happy Monday Campers! Thought we would share some recent book reviews done by one of our outdoorsy blogger friends and correspondent over at Alpine Lily." ,
+    "image": "http://cdn-jpg2.theactivetimes.net/sites/default/files/camping.jpg"
+  }, {
+    "name": "Johsn Smith",
+    "author": "San Francisco Hikes",
+    "date": "2016",
+    "text": "awesome, come and visit here.  Ashley Gossens As soon as I received the Royal Robbins in the mail I knew I would be a convert",
+    "image": "http://bustedwallet.com/wp-content/uploads/2014/05/Camping-Near-The-Lake-Background-Wallpaper.jpg"
+  }]
+}

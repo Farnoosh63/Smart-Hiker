@@ -4,6 +4,8 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'smart-hikers',
     environment: environment,
+    contentSecurityPolicy: { 'connect-src': "'self' https://auth.firebase.com wss://*.firebaseio.com" },
+    firebase: 'https://project-1572630813711226636.firebaseio.com/',
     baseURL: '/',
     locationType: 'auto',
     EmberENV: {

@@ -2,9 +2,10 @@
 <h2 class="blog-post-title">{{model.name}}<br></h2>
 <p class="blog-post-meta">post date: {{model.date}} by {{model.author}} </p>
 <blockquote>{{model.text}}</blockquote>
-{{edit-post post=model updatePost="updatePost"}}
+
+
 <br>
-<button {{action 'destroyPost' post}}>Delete this post</button><hr>
+
 
 <h2>Comments</h2>
 
@@ -12,6 +13,6 @@
 
 <ul>
 {{#each model.comments  as |comment|}}
-  {{comment-tile comment=comment update="update"}}
+  {{comment-tile comment=comment}}
 {{/each}}
 </ul>

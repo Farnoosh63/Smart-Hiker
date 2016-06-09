@@ -14,7 +14,6 @@ export default Ember.Route.extend({
       this.transitionTo('index');
     },
     updatePost(post, params) {
-      console.log(post);
       Object.keys(params).forEach(function(key) {
         if(params[key]!==undefined) {
           post.set(key, params[key]);
@@ -33,6 +32,14 @@ export default Ember.Route.extend({
         });
         this.transitionTo('index');
       }
-    }
+    },
+
+    // getAuthor(post){
+    //   var authorArray = [];
+    //   if(authorArray.indexOf(post.author)=== -1){
+    //     authorArray.push(post.author);
+    //   }
+    //   this.transitionTo('index');
+    // }
   }
 });

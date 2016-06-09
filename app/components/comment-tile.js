@@ -15,6 +15,7 @@ export default Ember.Component.extend({
         }
       });
       comment.save();
+      // this.transitionTo('post');
       // this.sendAction('update', comment, params);
     }
   }

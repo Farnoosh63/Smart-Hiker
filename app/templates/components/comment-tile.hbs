@@ -1,0 +1,5 @@
+<li>{{comment.description}} by {{comment.userName}} @ {{comment.time}} </li>
+
+{{edit-comment comment=comment update="update"}}
+
+<button {{action 'destroyComment' comment}}>Delete</button>

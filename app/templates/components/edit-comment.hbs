@@ -1,0 +1,16 @@
+<div class="container">
+{{#if editComment}}
+  <form class="form-signin">
+    <h2 class="form-signin-heading">Edit Comment</h2>
+    <label for="userName" class="sr-only">Your Name</label>
+    {{input value=userName id="userName" placeholder=comment.userName class="form-control"}}
+    <label for="time" class="sr-only">Date</label>
+    {{input value=time id="time" placeholder=comment.time class="form-control"}}
+    <label for="description" class="sr-only">Type something here ...</label>
+    {{textarea value=description id="description" rows="4" placeholder=comment.description class="form-control"}}
+    <button class="btn btn-lg btn-primary btn-block"  {{action 'update' comment}}>Save</button>
+  </form>
+  {{else}}
+  <button {{action 'editCommentFormShow'}}>Edit Comment</button>
+{{/if}}
+</div>

@@ -10,9 +10,9 @@
 
       <div class="blog-post">
       <ul>
-        {{#each model as |post|}}
+        {{#each model.posts as |post|}}
           <img class="img-circle img-responsive img-center" style="width: 200px"src={{post.image}} alt="postImage">
-          <h2 class="blog-post-title">{{post.name}} <br></h2>
+          {{#link-to 'post' post.id}}<h2 class="blog-post-title">{{post.name}}</h2>{{/link-to}}<br>
           <p class="blog-post-meta">post date: {{post.date}} by {{post.author}} </p>
           <blockquote>{{post.text}}</blockquote>
           {{edit-post post=post updatePost="updatePost"}}

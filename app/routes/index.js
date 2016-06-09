@@ -2,7 +2,10 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   model() {
-    return this.store.findAll('post');
+    return Ember.RSVP.hash({
+      posts: this.store.findAll('post'),
+      comments: this.store.findAll('comment')
+    });
   },
   actions: {
     savePost(params) {
@@ -22,7 +25,12 @@ export default Ember.Route.extend({
     },
     destroyPost(post) {
       if (confirm('Are you sure you want to delete this post?')) {
-        post.destroyRecord();
+        var post_deletions = post.get('comments').map(function(comment) {
+          return comment.destroyRecord();
+        });
+        Ember.RSVP.all(post_deletions).then(function() {
+          return post.destroyRecord();
+        });
         this.transitionTo('index');
       }
     }
